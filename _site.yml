@@ -1,0 +1,10 @@
+name: "Datums Science"
+output_dir: "."
+navbar:
+  left:
+    - text: "Datums Science"
+      href: index.html
+output:
+  html_document:
+    theme: spacelab
+    highlight: textmate
