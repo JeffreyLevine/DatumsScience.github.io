@@ -1,4 +1,4 @@
-name: "Datums Science"
+name: "DatumsScience.com"
 output_dir: "."
 navbar:
   left:
@@ -6,16 +6,19 @@ navbar:
       icon: fa-home
       href: index.html
     - text: "Pivot"
-      href: pivot.html
       icon: fa-cube
-    - text: "Data Viz"
-      href: plotly.html
+      href: pivot.html
+    - text: "Plotly"
       icon: fa-bar-chart
+      href: plotly.html
+    - text: "Leaflet"
+      icon: fa-map-marker
+      href: leaflet.html
     - text: "You Try!"
       href: youTry.html
       icon: fa-user
   right:
-    - icon: fa-code fa-lg
+    - icon: fa-github
       href: https://github.com/JeffreyLevine/DatumsScience.github.io
 output:
   html_document:

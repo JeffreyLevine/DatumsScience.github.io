@@ -1,0 +1,19 @@
+---
+title: ""
+---
+
+<br>
+
+## Leaflet
+* Try [Leaflet](https://rstudio.github.io/leaflet) for Interactive Maps
+* Pretty easy to add to your site with just a few lines
+* In Baltimore we love our [Trash Wheels!](http://baltimorewaterfront.com/healthy-harbor/water-wheel)
+
+```{r}
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng=-76.603611, lat=39.283167, popup="Mr. Trash Wheel Cleans Here!") %>%
+  addMarkers(lng=-76.580603, lat=39.279603, popup="Professor Trash Wheel Cleans Here!")
+```
+
