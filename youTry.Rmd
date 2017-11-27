@@ -1,0 +1,45 @@
+---
+title: ""
+---
+
+<br>
+
+## Video: RMarkdown Website for Github
+
+<br>
+
+<iframe src="https://player.vimeo.com/video/225346164" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<br>
+
+#### In progress..
+* This page isn't totally ready yet
+* I made the video public on vimeo to play around with adding here
+* I assumed nobody would watch it until the site was ready
+* Then I realized people might actually watch it
+* If so, then they might want the links I mentioned
+* Well, I don't have the all the links ready yet (sorry about that)
+* But I do have the steps below, which are the important parts
+* Sorry again, the rest will be here soon...
+
+#### Steps
+* FROM GITHUB:
+    + Github > New Repo > userName.github.io > check Initialize with ReadMe
+    + Copy to clipboard
+* FROM COMMAND LINE:
+    + cd ~/to/your/path
+    + git clone [paste from clipboard]
+    + git clone https://github.com/rstudio/rmarkdown-website-examples.git
+* FROM FILE BROWSER:
+    + Copy/paste example files from gh-pages to your repo
+    + rmarkdown-website-examples > gh-pages
+* FROM RSTUDIO:
+    + to/your/path > set wd
+    + rmarkdown::render_site()
+* FROM COMMAND LINE:
+    + cd ~to/your/path/userName.github.io
+    + git add -A
+    + git commit -m "Initial commit"
+    + git push origin master
+    + Enter your userName and password
+

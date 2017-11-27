@@ -228,19 +228,59 @@ $(document).ready(function () {
 
 
 <p><br></p>
-<div class="figure">
-<img src="images/Ds.jpg" style="width:50.0%" />
-
-</div>
+<div id="video-rmarkdown-website-for-github" class="section level2">
+<h2>Video: RMarkdown Website for Github</h2>
 <p><br></p>
-<div id="hi-im-jeff-levine" class="section level2">
-<h2>Hi, I’m Jeff Levine</h2>
+<iframe src="https://player.vimeo.com/video/225346164" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</iframe>
+<p><br></p>
+<div id="in-progress.." class="section level4">
+<h4>In progress..</h4>
 <ul>
-<li>Here are a few simple examples</li>
-<li>I’ll be adding more soon, please come back for the rest, or…</li>
-<li>Feel free to visit <a href="http://www.jeffreylevine.com">JeffreyLevine.com</a></li>
-<li>Thanks, Jeff</li>
+<li>This page isn’t totally ready yet</li>
+<li>I made the video public on vimeo to play around with adding here</li>
+<li>I assumed nobody would watch it until the site was ready</li>
+<li>Then I realized people might actually watch it</li>
+<li>If so, then they might want the links I mentioned</li>
+<li>Well, I don’t have the all the links ready yet (sorry about that)</li>
+<li>But I do have the steps below, which are the important parts</li>
+<li>Sorry again, the rest will be here soon…</li>
 </ul>
+</div>
+<div id="steps" class="section level4">
+<h4>Steps</h4>
+<ul>
+<li>FROM GITHUB:
+<ul>
+<li>Github &gt; New Repo &gt; userName.github.io &gt; check Initialize with ReadMe</li>
+<li>Copy to clipboard</li>
+</ul></li>
+<li>FROM COMMAND LINE:
+<ul>
+<li>cd ~/to/your/path</li>
+<li>git clone [paste from clipboard]</li>
+<li>git clone <a href="https://github.com/rstudio/rmarkdown-website-examples.git" class="uri">https://github.com/rstudio/rmarkdown-website-examples.git</a></li>
+</ul></li>
+<li>FROM FILE BROWSER:
+<ul>
+<li>Copy/paste example files from gh-pages to your repo</li>
+<li>rmarkdown-website-examples &gt; gh-pages</li>
+</ul></li>
+<li>FROM RSTUDIO:
+<ul>
+<li>to/your/path &gt; set wd</li>
+<li>rmarkdown::render_site()</li>
+</ul></li>
+<li>FROM COMMAND LINE:
+<ul>
+<li>cd ~to/your/path/userName.github.io</li>
+<li>git add -A</li>
+<li>git commit -m “Initial commit”</li>
+<li>git push origin master</li>
+<li>Enter your userName and password</li>
+</ul></li>
+</ul>
+</div>
 </div>
 
 

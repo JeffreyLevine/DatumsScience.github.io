@@ -1,0 +1,24 @@
+---
+title: ""
+---
+
+<br>
+
+## Blue Crab Landings Pivot
+* Data: Annual Blue Crab Landings from 1950 to 2015 by State
+* Source: [NOAA's National Marine Fisheries Service](https://www.st.nmfs.noaa.gov/commercial-fisheries/commercial-landings/annual-landings/index)
+* Total of Hard, Soft and Peeler by State
+* What are Blue Crab Landings?
+    * Blue Crabs caught and brought to land
+    * Excludes those caught but returned to the water (juveniles, etc.)
+<br>
+
+```{r}
+library(rpivotTable)
+datums <- read.csv("~/Jeff/rSpace/Data/crab1950to2015.csv")
+rpivotTable(datums, rows = "State", cols = "Year", aggregatorName = "Sum",
+            vals = "PoundsMillions", rendererName = "Area Chart",
+            inclusions = list(Year  = as.list(as.character(c(1980:2015))),
+                              State = list("LA", "MD", "NC", "VA")))
+```
+
