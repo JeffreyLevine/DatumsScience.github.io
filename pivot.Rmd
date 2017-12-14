@@ -1,24 +1,38 @@
 ---
 title: ""
+output:  
+  html_document:
+    code_folding: hide
 ---
 
 <br>
 
-## Blue Crab Landings Pivot
-* Data: Annual Blue Crab Landings from 1950 to 2015 by State
+### Blue Crab Landings Pivot
+* Data: Annual Blue Crab Landings from 1950 to 2016 by State
 * Source: [NOAA's National Marine Fisheries Service](https://www.st.nmfs.noaa.gov/commercial-fisheries/commercial-landings/annual-landings/index)
-* Total of Hard, Soft and Peeler by State
-* What are Blue Crab Landings?
-    * Blue Crabs caught and brought to land
+* What are Blue Crab "Landings"?
+    * Blue Crabs caught and brought to "Land"
     * Excludes those caught but returned to the water (juveniles, etc.)
-<br>
-
+* **THIS IS INTERACTIVE!**
+* Recommendations if unfamiliar with pivoting:
+    * General Tip: scroll down in your browser before selecting
+    * You need to see the bottom of dropdown lists (to click "Apply")
+    * If you have any problems, just refresh your browser to reset
+    * Now, where you see "Table" (below/left), select "Stacked Bar Chart"
+    * Next, from "State" dropdown in the blue area, select some States
+    * Same deal with "Year" in the other blue area
+* Lots more options, feeling ambitious?
+    * Switch from "Stacked Bar Chart" back to "Table" (or just refresh)
+    * Now drag the "Region" box from the gray area & drop below "State"
+    * Next drag & drop "State" to the gray area where "Region" was
+    * Then, with "State" still in the gray area, select whichever
+    * See the regional totals change? Get the idea? Go have at it...
 ```{r}
 library(rpivotTable)
-datums <- read.csv("~/Jeff/rSpace/Data/crab1950to2015.csv")
+datums <- read.csv("~/Jeff/rSpace/Data/crabDatums1950To2016.csv")
 rpivotTable(datums, rows = "State", cols = "Year", aggregatorName = "Sum",
-            vals = "PoundsMillions", rendererName = "Area Chart",
-            inclusions = list(Year  = as.list(as.character(c(1980:2015))),
+            vals = "PoundsMillion", rendererName = "Table",
+            inclusions = list(Year  = as.list(as.character(c(2007:2016))),
                               State = list("LA", "MD", "NC", "VA")))
 ```
 

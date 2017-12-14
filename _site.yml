@@ -8,6 +8,9 @@ navbar:
     - text: "Pivot"
       icon: fa-cube
       href: pivot.html
+    - text: "Ggplot"
+      icon: fa-bar-chart
+      href: ggplot.html
     - text: "Plotly"
       icon: fa-bar-chart
       href: plotly.html

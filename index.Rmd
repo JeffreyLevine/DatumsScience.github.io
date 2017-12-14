@@ -20,9 +20,21 @@ title: ""
 
 #### Data Science Tools aren't just for Data Science... {style="padding-top: 0px;"}
 
-Hi, I’m Jeff. I'm planning to use this site to demonstrate some straightforward uses for Data Science Tools. Based on most of the feedback I've received about Data Science Tools, they're widely considered to be very complicated and time consuming to learn. I can only assume this is because they can, in fact, be used for very complicated things that are most certainly very complicated and time consuming to learn. I'm not sure it's as clear as it should be that they're reasonably easy to use for straightforward analysis and offer many advantages compared to spreadsheets and other typical analytical tools. I hope to clear this up. I have a bunch more work to do for this clarification, but I just needed to get the site up to get the process going. It's 12.01.17, just to let you know it hasn't been sitting here with my "under construction" excuse for too long. I'm working on this right now. To sum up, I just wanted to make sure this is understood so you won't be underwhelmed if you've stumbled upon this. Please feel free to check out the few examples I have so far, I'll be adding more shortly, so come on back soon or visit [JeffreyLevine.com](http://www.jeffreylevine.com).
+Hi, I’m Jeff. I'm planning to use this site to demonstrate some straightforward uses for Data Science Tools. Based on most of the feedback I've received about Data Science Tools, they're widely considered to be very complicated and time consuming to learn. I can only assume this is because they can, in fact, be used for very complicated things that are most certainly very complicated and time consuming to learn. I'm not sure it's as clear as it should be, however, that they're reasonably easy to use for straightforward analysis and offer many advantages compared to spreadsheets and other typical analytical tools. I hope to clear this up by showing examples here. I have a bunch more work to do for this clarification, but I just needed to get the site up to get the process going. It's 12.01.17 (just to let you know it hasn't been sitting here with my "under construction" excuse for too long). To sum up, I just wanted to make sure this is understood so you won't be underwhelmed if you've stumbled upon this. Please feel free to check out the few examples I have so far, more coming soon...
 
 *Thanks, Jeff*
+
+<br>
+
+#### Updates:
+* 12.13.17, found some time to add stuff:
+    * New dataset with 2016 Landings
+    * 2016 now available in the pivot
+    * Added the Ggplot tab
+    * Added "crab plots" to the Plotly tab
+* Coming soon (when I get more time, maybe next week):
+    * Maps (new dataset has lat long for leaflet)
+    * How I prepped the data (using dplyr)
 
 </div>
 <div class="col-sm-6">

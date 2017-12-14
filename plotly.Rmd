@@ -4,23 +4,79 @@ title: ""
 
 <br>
 
-## Plotly Sample
-
-<br>
+### Plotly Examples
+* Plotly is one of the many great ways to make interactive visualizations
+* I plan to add more, but here are a few to get started
+* Each, as you can see, is just a few lines of code
+* Nothing too flashy, just examples to see it doesn't take long to learn
+* Let's get started, first we'll load the packages and data
 
 ```{r, message = FALSE}
 library(ggplot2)
 library(plotly)
-p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
-            geom_bar(position = "dodge")
-ggplotly(p)
+datums <- read.csv("~/Jeff/rSpace/Data/crabDatums1950To2016.csv")
+```
+
+<br>
+
+#### Lines
+* All these lines are pretty busy and hard to follow
+* Plotly solves that problem:
+    * Just double click the legend (to the right) to remove them
+    * Then click the States you want to see
+* Of course you can hover in the visualization for more info
+* And more options in the upper right to zoom, pan, download, etc...
+* Again, nothing flashy, but not bad for 2 lines of code
+
+```{r, message = FALSE, fig.height = 7, fig.width = 9}
+p1 <- ggplot(datums, aes(x = Year, y = PoundsMillion, color = State))
+ggplotly(p1 + geom_line())
+```
+
+<br>
+
+#### Jitter
+* This Jitter Visualization is only mildly useful without interactivity
+* With the hover info, it makes a quick way to explore lots of points
+* For example, we can quickly see Landings in descending order and which year
+* Assuming you're interested in that sort of thing (I am)
+
+```{r, message = FALSE, fig.height = 7, fig.width = 9}
+p2 <- ggplot(datums, aes(x = State, y = PoundsMillion))
+ggplotly(p2 + geom_point(aes(color = Year),
+                         alpha = 0.5, size = 1.5,
+                         position = position_jitter(width  = 0.25,
+                                                    height = 0)))
+```
+
+<br>
+
+#### Area
+* I'm thinking you get the idea
+
+```{r, message = FALSE, fig.height = 7, fig.width = 9}
+p3 <- ggplot(subset(datums, State %in% c("MD", "LA", "NC","VA")),
+             aes(x = Year, y = PoundsMillion, fill = State))
+ggplotly(p3 + geom_area())
+```
+
+#### Another Jitter
+* Again, you get the idea
+
+```{r, message = FALSE, fig.height = 7, fig.width = 9}
+p4 <- ggplot(subset(datums,
+                    State %in% c("MD", "VA", "NJ", "FL",
+                                 "LA", "NC", "SC","TX")),
+             aes(x = Region, y = PoundsMillion))
+ggplotly(p4 + geom_point(aes(color = State),
+                         alpha = 0.5, size = 2,
+                         position = position_jitter(width  = 0.25,
+                                                    height = 0)))
 ```
 
 
-```{r, message = FALSE}
-d <- diamonds[sample(nrow(diamonds), 500), ]
-plot_ly(d, x = d$carat, y = d$price, 
-        text = paste("Clarity: ", d$clarity),
-        mode = "markers", color = d$carat, size = d$carat)
-```
+
+<br>
+<br>
+
 
